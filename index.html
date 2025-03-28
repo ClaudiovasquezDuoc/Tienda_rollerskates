@@ -107,7 +107,7 @@
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categorias
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu text-bg-primary p-3">
                                     <li><a class="dropdown-item" href="#">Vestimenta</a></li>
                                     <li><a class="dropdown-item" href="#">Protecciones</a></li>
                                     <li><a class="dropdown-item" href="#">Patines en linea</a></li>
@@ -144,28 +144,33 @@
         <div class="container-sm" style="margin-top: 120px;">
             <div class="row">
                 <div id="carouselNoticias" class="carousel slide carousel-fade " data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
                     <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/460841379_122178185546159385_4666993186618030129_n.jpg" class="img-fluid" alt="imagen_01">
+                        <div class="carousel-item active c-item">
+                            <img src="img/img_noticias/460841379_122178185546159385_4666993186618030129_n.jpg" class="d-block w-100 c-img" alt="imagen_01">
+                        </div>
+                        <div class="carousel-item c-item">
+                            <img src="img/img_noticias/463277121_558761180046572_7196937351514742944_n.jpg" class="d-block w-100 c-img" alt="imagen_02">
+                        </div>
+                        <div class="carousel-item c-item">
+                            <img src="img/img_noticias/Ay-HPMc8_400x400.jpg" class="d-block w-100 c-img" alt="imagen_03">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/463277121_558761180046572_7196937351514742944_n.jpg" class="img-fluid" alt="imagen_02">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/Ay-HPMc8_400x400.jpg" class="img-fluid " alt="imagen_03">
-                    </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticias" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticias" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div>
-          </div>
+            </div> 
+        </div>
     </main>
 
 
