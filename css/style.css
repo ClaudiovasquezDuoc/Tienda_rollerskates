@@ -1,37 +1,16 @@
 header {
     position: static;
-    background-color: rgb(255, 255, 255);
-    padding-bottom: 25px;
-    height: 170px;
-    
-}
-header img {
-    margin-top: 5%;
-    width: 160px;
-    padding-bottom: 66px;
-    
-}
-.btn-warning {
-    color: rgb(255, 255, 255);
-    font-weight:bold;
-    margin-top: 10%;
+
+    height: 370px;   
 }
 .container-fluid{
-    bottom: 57px;
     position:relative;
-    height: 70px;
-    background-color: rgb(46, 253, 243);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding-bottom: 5px;
 }
 .c-item{
     height: 480px;
-
 }
 .c-img{
     height: 100%;
     object-fit: cover;
     filter: brightness(0.6);
- 
 }
