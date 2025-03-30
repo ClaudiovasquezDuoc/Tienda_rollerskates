@@ -1,34 +1,77 @@
+/* Ajuste del header */
 header {
     position: static;
+    height: 370px;
+}
 
-    height: 370px;   
+/* Contenedor principal */
+.container-fluid {
+    position: relative;
 }
-.container-fluid{
-    position:relative;
+
+/* Estilos del carrusel */
+.c-item {
+    height: 600px; /* Ajuste de altura */
 }
-.c-item{
-    height: 480px;
-}
-.c-img{
+.c-img {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.6);
 }
 
+/* Ajustes generales de las tarjetas de productos */
 .card {
-        height: 350px; /* Ajusta la altura de todas las tarjetas */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+    height: 450px; /* Reducimos un poco la altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03); /* Efecto al pasar el mouse */
+}
+
+/* Ajuste de imagen dentro de la tarjeta */
 .card-img-top {
-        height: 200px; /* Reduce el tamaño de la imagen */
-        object-fit: cover; /* Ajusta la imagen sin deformarla */
+    height: 260px; /* Reduce el tamaño de la imagen */
+    object-fit: cover; /* Mantiene proporciones sin deformar */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
+
+/* Cuerpo de la tarjeta */
 .card-body {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
+
+/* Ajuste de los botones dentro de las tarjetas */
+.card-body button {
+    margin-top: 5px;
+}
+
+/* Alineación de los productos en filas */
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Carrito de compras */
+#carrito-lista {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Estilos para botones */
+.btn {
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 

@@ -142,112 +142,123 @@
     </header>
 
 
-    <!-- Productos en venta -->
+    <!--Productos en venta-->
     <div class="container mt-4">
-        <h1 class="text-center mb-4">Protecciones para patinar</h1>
-        <div class="row">
-            <!-- Producto 1 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/casco1.jpeg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Casco Oxelo Blanco</h5>
-                        <p class="card-text text-success fw-bold">$19.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 2 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/casco2.jpeg" class="card-img-top" alt="Producto 2">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Casco Oxelo negro</h5>
-                        <p class="card-text text-success fw-bold">$19.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 3 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/casco3.jpeg" class="card-img-top" alt="Producto 3">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Casco Oxelo rosa</h5>
-                        <p class="card-text text-success fw-bold">$19.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 4 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/casco4.jpg" class="card-img-top" alt="Producto 4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Casco Oxelo Blanco Light</h5>
-                        <p class="card-text text-success fw-bold">$29.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 5 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/coderas1.jpeg" class="card-img-top" alt="Producto 5">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Coderas 187</h5>
-                        <p class="card-text text-success fw-bold">$7.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 6 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/guantes_deslizantes1.jpg" class="card-img-top" alt="Producto 6">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Guantes para deslizar</h5>
-                        <p class="card-text text-success fw-bold">$29.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 7 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/rodillera2.png" class="card-img-top" alt="Producto 7">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Rodilleras Smith AP rosa</h5>
-                        <p class="card-text text-success fw-bold">$27.500</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 8 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/rodilleras1.jpg" class="card-img-top" alt="Producto 8">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Rodilleras REKD</h5>
-                        <p class="card-text text-success fw-bold">$32.500</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 9 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/set_proteccion1.jpg" class="card-img-top" alt="Producto 9">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Set protecciones generic</h5>
-                        <p class="card-text text-success fw-bold">$19.500</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 10 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/protecciones/set_proteccion2.jpg" class="card-img-top" alt="Producto 9">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Set protecciones Micro</h5>
-                        <p class="card-text text-success fw-bold">$29.500</p>
-                    </div>
-                </div>
-            </div>
+        <h1 class="text-center mb-4">Accesorios para patinar</h1>
+        <div class="row" id="productos-container">
+
         </div>
-    </div>
+    </div>    
+            
+    <!-- Carrito de Compras -->
+    <div class="container mt-5"></div>
+        <h2 class="text-center">🛒 Carrito de Compras</h2>
+        <ul class="list-group mb-3" id="carrito-lista"></ul>
+        <p class="fw-bold text-center">Total: <span id="total-carrito">$0</span></p>
+        <div class="text-center">
+            <button class="btn btn-success" onclick="realizarCompra()">Finalizar Compra</button>
+            <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+    </div> 
+
+    <script>
+        // Productos disponibles
+        const productos = [
+            { id: 13, nombre: "Casco Oxelo Blanco", precio: 19990, img: "img/protecciones/casco1.jpeg" },
+            { id: 14, nombre: "Casco Oxelo Negro", precio: 19990, img: "img/protecciones/casco2.jpeg" },
+            { id: 15, nombre: "Casco Oxelo Rosa", precio: 19990, img: "img/protecciones/casco3.jpeg" },
+            { id: 16, nombre: "Casco Oxelo Black Light", precio: 29990, img: "img/protecciones/casco4.jpg" },
+            { id: 17, nombre: "Coderas 187", precio: 7990, img: "img/protecciones/coderas1.jpeg" },
+            { id: 18, nombre: "Guantes para deslizar", precio: 29990, img: "img/protecciones/guantes_deslizantes1.jpg" },
+            { id: 19, nombre: "Rodilleras Smith AP Rosa", precio: 27500, img: "img/protecciones/rodillera2.png" },
+            { id: 20, nombre: "Rodilleras REKD", precio: 32500, img: "img/protecciones/rodilleras1.jpg" },
+            { id: 21, nombre: "Set protecciones generic", precio: 19500, img: "img/protecciones/set_proteccion1.jpg" },
+            { id: 22, nombre: "Set protecciones Micro", precio: 29500, img: "img/protecciones/set_proteccion2.jpg" }
+        ];
+
+        let carrito = [];
+
+        // Cargar productos en la tienda
+        function cargarProductos() {
+            const contenedor = document.getElementById("productos-container");
+            productos.forEach(producto => {
+                contenedor.innerHTML += `
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                        <div class="card">
+                            <img src="${producto.img}" class="card-img-top" alt="${producto.nombre}">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">${producto.nombre}</h5>
+                                <p class="card-text text-success fw-bold">$${producto.precio.toLocaleString()}</p>
+                                <button class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Agregar producto al carrito
+        function agregarAlCarrito(id) {
+            const producto = productos.find(p => p.id === id);
+            const productoEnCarrito = carrito.find(p => p.id === id);
+
+            if (productoEnCarrito) {
+                productoEnCarrito.cantidad++;
+            } else {
+                carrito.push({ ...producto, cantidad: 1 });
+            }
+
+            actualizarCarrito();
+        }
+
+        // Actualizar la vista del carrito
+        function actualizarCarrito() {
+            const listaCarrito = document.getElementById("carrito-lista");
+            const totalCarrito = document.getElementById("total-carrito");
+            listaCarrito.innerHTML = "";
+            let total = 0;
+
+            carrito.forEach(producto => {
+                total += producto.precio * producto.cantidad;
+                listaCarrito.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        ${producto.nombre} - $${producto.precio.toLocaleString()} x ${producto.cantidad}
+                        <button class="btn btn-danger btn-sm" onclick="eliminarDelCarrito(${producto.id})">❌</button>
+                    </li>
+                `;
+            });
+
+            totalCarrito.innerText = `$${total.toLocaleString()}`;
+        }
+
+        // Eliminar un producto del carrito
+        function eliminarDelCarrito(id) {
+            carrito = carrito.filter(p => p.id !== id);
+            actualizarCarrito();
+        }
+
+        // Vaciar carrito
+        function vaciarCarrito() {
+            carrito = [];
+            actualizarCarrito();
+        }
+
+        // Simulación de compra
+        function realizarCompra() {
+            if (carrito.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+            alert("¡Compra realizada con éxito! Gracias por tu compra.");
+            vaciarCarrito();
+        }
+
+        // Cargar productos al cargar la página
+        cargarProductos();
+    </script>
+
+
+    
 
 
 

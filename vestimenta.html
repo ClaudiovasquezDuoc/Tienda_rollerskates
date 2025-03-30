@@ -141,103 +141,120 @@
         </div>
     </header>
 
-    <!-- Productos en venta -->
+    <!--Productos en venta-->
     <div class="container mt-4">
-        <h1 class="text-center mb-4">Vestimenta enfocada en patinar</h1>
-        <div class="row">
-            <!-- Producto 1 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/vestimenta/calceta 1.jpeg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Calcetines Steigen naranjo</h5>
-                        <p class="card-text text-success fw-bold">$14.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 2 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/vestimenta/calceta 2.jpeg" class="card-img-top" alt="Producto 2">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Calcetines Steigen verde</h5>
-                        <p class="card-text text-success fw-bold">$14.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 3 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/vestimenta/calceta 3.jpeg" class="card-img-top" alt="Producto 3">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Calcetines Steigen morado</h5>
-                        <p class="card-text text-success fw-bold">$14.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 4 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/vestimenta/jockey1.jpeg" class="card-img-top" alt="Producto 4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Jockey Steigen negro</h5>
-                        <p class="card-text text-success fw-bold">$9.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 5 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/vestimenta/jockey2.jpeg" class="card-img-top" alt="Producto 5">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Jockey Steigen Azul</h5>
-                        <p class="card-text text-success fw-bold">$9.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 6 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/vestimenta/jockey3.jpeg" class="card-img-top" alt="Producto 6">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Jockey Steigen Café</h5>
-                        <p class="card-text text-success fw-bold">$9.990</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 7 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/vestimenta/lentes1.jpeg" class="card-img-top" alt="Producto 7">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Gafas Steigen Bblue</h5>
-                        <p class="card-text text-success fw-bold">$17.500</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 8 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/vestimenta/lentes2.jpeg" class="card-img-top" alt="Producto 8">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Gafas Steigen Wblue</h5>
-                        <p class="card-text text-success fw-bold">$21.500</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 9 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <img src="img/vestimenta/lentes3.jpeg" class="card-img-top" alt="Producto 9">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Gafas Steigen Wred</h5>
-                        <p class="card-text text-success fw-bold">$19.500</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <h1 class="text-center mb-4">Accesorios para patinar</h1>
+        <div class="row" id="productos-container">
 
+        </div>
+    </div>    
+            
+    <!-- Carrito de Compras -->
+    <div class="container mt-5"></div>
+        <h2 class="text-center">🛒 Carrito de Compras</h2>
+        <ul class="list-group mb-3" id="carrito-lista"></ul>
+        <p class="fw-bold text-center">Total: <span id="total-carrito">$0</span></p>
+        <div class="text-center">
+            <button class="btn btn-success" onclick="realizarCompra()">Finalizar Compra</button>
+            <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+    </div> 
+
+    <script>
+        // Productos disponibles
+        const productos = [
+            {id: 35, nombre: "Calcetines Steigen Naranjo", precio: 14990, img: "img/vestimenta/calceta 1.jpeg"},
+            {id: 36, nombre: "Calcetines Steigen Verde", precio: 14990, img: "img/vestimenta/calceta 2.jpeg"},
+            {id: 37, nombre: "Calcetines Steigen Morado", precio: 14990, img: "img/vestimenta/calceta 3.jpeg"},
+            {id: 38, nombre: "Jockey Steigen negro", precio: 9990, img: "img/vestimenta/jockey1.jpeg"},
+            {id: 39, nombre: "Jockey Steigen Azul", precio: 9990, img: "img/vestimenta/jockey2.jpeg"},
+            {id: 40, nombre: "Jockey Steigen Café", precio: 9990, img: "img/vestimenta/jockey3.jpeg"},
+            {id: 41, nombre: "Gafas Steigen Bblue", precio: 17500, img: "img/vestimenta/lentes1.jpeg"},
+            {id: 42, nombre: "Gafas Steigen Wblue", precio: 21500, img: "img/vestimenta/lentes2.jpeg"},
+            {id: 43, nombre: "Gafas Steigen Wred", precio: 19500, img: "img/vestimenta/lentes3.jpeg"},
+            
+        ]
+
+        let carrito = [];
+
+        // Función para agregar un producto al carrito
+        function cargarProductos() {
+            const contenedor = document.getElementById("productos-container");
+            productos.forEach(producto => {
+                contenedor.innerHTML += `
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                        <div class="card">
+                            <img src="${producto.img}" class="card-img-top" alt="${producto.nombre}">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">${producto.nombre}</h5>
+                                <p class="card-text text-success fw-bold">$${producto.precio.toLocaleString()}</p>
+                                <button class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Agregar producto al carrito
+        function agregarAlCarrito(id) {
+            const producto = productos.find(p => p.id === id);
+            const productoEnCarrito = carrito.find(p => p.id === id);
+
+            if (productoEnCarrito) {
+                productoEnCarrito.cantidad++;
+            } else {
+                carrito.push({ ...producto, cantidad: 1 });
+            }
+
+            actualizarCarrito();
+        }
+
+        // Actualizar la vista del carrito
+        function actualizarCarrito() {
+            const listaCarrito = document.getElementById("carrito-lista");
+            const totalCarrito = document.getElementById("total-carrito");
+            listaCarrito.innerHTML = "";
+            let total = 0;
+
+            carrito.forEach(producto => {
+                total += producto.precio * producto.cantidad;
+                listaCarrito.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        ${producto.nombre} - $${producto.precio.toLocaleString()} x ${producto.cantidad}
+                        <button class="btn btn-danger btn-sm" onclick="eliminarDelCarrito(${producto.id})">❌</button>
+                    </li>
+                `;
+            });
+
+            totalCarrito.innerText = `$${total.toLocaleString()}`;
+        }
+
+        // Eliminar un producto del carrito
+        function eliminarDelCarrito(id) {
+            carrito = carrito.filter(p => p.id !== id);
+            actualizarCarrito();
+        }
+
+        // Vaciar carrito
+        function vaciarCarrito() {
+            carrito = [];
+            actualizarCarrito();
+        }
+
+        // Simulación de compra
+        function realizarCompra() {
+            if (carrito.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+            alert("¡Compra realizada con éxito! Gracias por tu compra.");
+            vaciarCarrito();
+        }
+
+        // Cargar productos al cargar la página
+        cargarProductos();
+    </script>
 
 
 
