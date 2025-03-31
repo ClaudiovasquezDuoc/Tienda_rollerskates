@@ -73,9 +73,19 @@
                             <input type="text" class="form-control" id="user" placeholder="Ej:usuario1234" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your username (e.g. john.doe)">
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
+                            <label for="pass" class="form-label">Contraseña</label>
                             <input type="password" class="form-control" id="pass" placeholder="*****" aria-hidden="true">
-                        </div>                
+                            <div id="passwordError" class="form-text text-danger"></div>
+                            <div class="form-text">
+                                La contraseña debe tener:
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-success"></i> 8-20 caracteres</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> Mayúsculas y minúsculas</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> Al menos un número</li>
+                                    <li><i class="fas fa-check-circle text-success"></i> Al menos un carácter especial</li>
+                                </ul>
+                            </div>
+                        </div>               
                         <div class="mb-3">
                             <label for="direccion" class="form-label">Direccion</label>
                             <input type="text" class="form-control" id="direccion" placeholder="Ej:las perdices 1234">
