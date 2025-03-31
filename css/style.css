@@ -1,9 +1,12 @@
 /* Ajuste del header */
 header {
     position: static;
-    height: 370px;
-}
+    height: 250px;
 
+}
+body{
+    width: 100%;
+}
 /* Contenedor principal */
 .container-fluid {
     position: relative;
@@ -12,6 +15,7 @@ header {
 /* Estilos del carrusel */
 .c-item {
     height: 600px; /* Ajuste de altura */
+    
 }
 .c-img {
     height: 100%;
